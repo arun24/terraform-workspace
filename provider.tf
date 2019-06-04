@@ -10,5 +10,6 @@ provider "aws" {
   tags = {
     Name = "main"
     Batch = "930am"
+    Location = "Bangalore"
   }
 }
