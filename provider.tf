@@ -11,7 +11,7 @@ terraform{
 }
  //create VPC
  resource "aws_vpc" "main" {
-  cidr_block       = "${var.vpc_cidr}"
+  cidr_block       = 10.0.0.0/16
   instance_tenancy = "default"
 
   tags = {
@@ -28,10 +28,3 @@ resource "aws_subnet" "main" {
     Name = "Main"
   }
 }
-
-#declareing a variable
- variable "vpc_cidr"{
- description = "choose cidr for vpc"
-  default = 10.0.0.0/16
-
- }
